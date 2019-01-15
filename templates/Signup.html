@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup</title>
+	<link rel="stylesheet" type="text/css" href="/static/signup.css">
+
+</head>
+<body>
+
+	<h1 style= "text-align:center">Signup</h1>
+	<p> 
+
+	<form class="site-form" action= "{% url 'Signup' %}" method="post">
+		
+		{% csrf_token %}
+		
+		{% for field in form %}
+
+      <p>
+       <h3 style= "text-align:center"> {{ field.label_tag }}</h3>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="visibility: hidden ; font-size:.5%">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="visibility:hidden">{{ error }}</p>
+        {% endfor %}
+      </p>
+      	{% endfor %}
+		<div class="sub">
+		<input  type="submit" value="Signup">
+        </div>
+	</form>
+
+</body>
+</html>

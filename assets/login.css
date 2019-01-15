@@ -1,0 +1,33 @@
+body {
+  background-image: url("website2.jpg");
+   background-size: cover;
+}
+input{
+	 width: 250px;
+	 height: 23px;
+	 border-width: 3px;
+	 margin-left: 350px;
+	
+	 display: block;
+}
+
+.sub input{
+
+	width: 100px;
+	height: 30px;
+	background-color: gray;
+	font-size: 20px;
+	   
+   
+    margin-top: 80px;		
+	 display: block;
+	 
+}
+ h3{
+
+margin-left: 350px;
+	display: block;
+}
+.site-form{
+	margin-top: 300px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="/static/login.css">
+</head>
+<body>
+<form class="site-form" action= "{% url 'Login' %}" method="post">
+		
+		{% csrf_token %}
+		{% for field in form %}
+
+      <p>
+       <h3 class=lbl> {{ field.label_tag }}</h3>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="visibility: hidden ; font-size:.5%">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="visibility:hidden">{{ error }}</p>
+        {% endfor %}
+      </p>
+      	{% endfor %}
+		<div class="sub">
+		<input type="submit" value="Login">
+        </div>
+	</form>
+</body>
+</html>
