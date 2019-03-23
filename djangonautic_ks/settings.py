@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +41,16 @@ INSTALLED_APPS = [
     'mainpage',
     
 ]
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgi_redis.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": ['redis://localhost:6379'],
+        },
+        "ROUTING": "djangonautic_ks.routing.channel_routing",
+    },
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,6 +63,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'djangonautic_ks.urls'
+ASGI_APPLICATION = 'djangonautic_ks.routing.application'
 
 TEMPLATES = [
     {

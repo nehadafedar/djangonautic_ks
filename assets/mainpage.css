@@ -33,7 +33,7 @@ body, html {
 	background-size: cover;
 	border: 3px solid #20B2AA;  
 	padding:5%;
-	box-shadow:10px 10px 5px #aaaaaa
+	box-shadow:10px 10px 5px #aaaaaa;
 
 }
 
@@ -62,9 +62,7 @@ body, html {
   background-color: #333;
 }
 
-.user_text{
-	width: 70%
-}
+
 
 
 

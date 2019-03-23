@@ -6,5 +6,10 @@ app_name='mainpage'
 urlpatterns = [
 	path('',views.mainpage_view,name="mainpage"),
 	path('update/',views.update,name="update"),
+	path('voice/',views.voice,name="voice"),
+	path('recorder/',views.recorder,name="recorder"),
+	path('thankyou/',views.thankyou_view,name="thankyou"),
+	path('Login_voice/',views.login_voice,name="Login_voice"),	
+	path('recorder_temp/',views.recorder_temp,name="recorder_temp")
 
 	]

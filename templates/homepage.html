@@ -11,7 +11,7 @@
 	<div class="bg"> </div>
 	
 	
-	<h1>Keystroke Dataset Collection</h1>
+	<h1>Behavioural Authentication</h1>
 	<div class="tab">
 		
 		
@@ -20,9 +20,9 @@
 		<input class="loBtn" id ="11" type="submit" name="logout" value="Logout">
 		</form>
 		
-		<form action="{% url 'Login' %}" method="POST">
+		<form action="{% url 'Log' %}" method="GET">
 		{% csrf_token %}
-		<input class="LiBtn" id ="12" type="submit" name="Login" value="Login">
+		<input class="LiBtn" id ="12" type="submit" name="Log" value="Log">
 		</form>
 		
 		<form action="{% url 'Signup' %}" method="POST">
